@@ -1,0 +1,16 @@
+_format_version: "3.0"
+_transform: true
+_info:
+  defaults: {}
+  select_tags:
+    - deployment:service-a
+services:
+  - host: service-a
+    name: service-a
+    routes:
+      - name: service-a
+        paths:
+          - /api/
+        strip_path: false
+upstreams:
+  - name: service-a
